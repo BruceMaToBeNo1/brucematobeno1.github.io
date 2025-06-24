@@ -108,7 +108,8 @@ outputs:
     - JSON # 用于搜索功能
 
 # 分页
-paginate: 8
+pagination:
+  pagerSize: 8
 
 # 代码高亮
 pygmentsUseClasses: true
@@ -131,7 +132,7 @@ privacy:
   vimeo:
     disabled: false
     simple: true
-  twitter:
+  x:
     disabled: false
     enableDNT: true
     simple: true
