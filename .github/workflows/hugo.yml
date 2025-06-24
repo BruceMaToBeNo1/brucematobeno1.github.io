@@ -31,12 +31,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.119.0
+      HUGO_VERSION: latest
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: true
           fetch-depth: 0
 
       - name: 安装 Hugo CLI
