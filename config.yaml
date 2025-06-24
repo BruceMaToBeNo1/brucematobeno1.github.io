@@ -1,0 +1,157 @@
+baseURL: 'https://brucema.cn'
+languageCode: 'zh-cn'
+title: 'Bruce Ma 的博客'
+theme: 'PaperMod'
+
+# 多语言支持
+defaultContentLanguage: zh
+defaultContentLanguageInSubdir: false
+
+# 网站基本信息
+params:
+  env: production
+  title: Bruce Ma
+  description: "分享技术、生活和思考的个人博客"
+  keywords: [Blog, Portfolio, Technology, Programming]
+  author: Bruce Ma
+  
+  # 主题配置
+  DateFormat: "2006年01月02日"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+  
+  # 首页配置
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowToc: true
+  
+  # 评论系统 (可选)
+  comments: false
+  
+  # 社交链接
+  socialIcons:
+    - name: github
+      url: "https://github.com/your-username"
+    - name: twitter
+      url: "https://twitter.com/your-username"
+    - name: linkedin
+      url: "https://linkedin.com/in/your-username"
+    - name: email
+      url: "mailto:your-email@example.com"
+    - name: rss
+      url: "index.xml"
+
+  # 首页模式
+  homeInfoParams:
+    Title: "欢迎来到 Bruce Ma 的博客 👋"
+    Content: |
+      这里是我分享技术见解、生活感悟和个人思考的地方。
+      
+      主要内容包括：编程技术、产品思考、生活随笔等。
+
+  # 搜索配置
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# 菜单配置
+menu:
+  main:
+    - identifier: home
+      name: 首页
+      url: /
+      weight: 10
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 20
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 30
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 40
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 50
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 60
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 70
+
+# 构建配置
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# 输出格式
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # 用于搜索功能
+
+# 分页
+paginate: 8
+
+# 代码高亮
+pygmentsUseClasses: true
+pygmentsStyle: github
+pygmentsCodeFences: true
+
+# Markdown 配置
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    lineNos: true
+    codeFences: true
+    guessSyntax: true
+
+# 隐私配置
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+  instagram:
+    disabled: false
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+
+# 站点地图
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+  filename: sitemap.xml
+
+# 安全配置
+security:
+  enableInlineShortcodes: false
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^CI$
