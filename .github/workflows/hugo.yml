@@ -49,7 +49,10 @@ jobs:
 
       - name: 清理旧的 public 目录
         run: rm -rf public
-
+      
+      - name: 删除 CNAME 文件（测试用）
+        run: rm -f static/CNAME public/CNAME || true
+      
       - name: 构建 Hugo 站点
         env:
           HUGO_ENVIRONMENT: production
