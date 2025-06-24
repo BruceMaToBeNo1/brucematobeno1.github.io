@@ -52,7 +52,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://brucema.cn/"
 
       - name: 上传页面构建产物
         uses: actions/upload-pages-artifact@v3
