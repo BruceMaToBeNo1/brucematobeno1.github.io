@@ -19,7 +19,7 @@ disableShare: false
 searchHidden: false
 ---
 
-## 👋 你好，世界！
+## 👋 Hello，World！
 
 欢迎来到我的个人博客！我是**马文龙（Bruce Ma）**，一名拥有10年经验的架构师和技术经理。这是我在互联网上的一个小角落，用来分享我的技术见解、架构思考和管理经验。
 
